@@ -4,7 +4,7 @@ SentimAnalyzer
 Overview
 --------
 
-SentimAnalyzer is an AI-powered web application designed to analyze and interpret the emotional tone behind text inputs. Utilizing advanced natural language processing techniques, SentimAnalyzer can process a wide range of text inputs, such as social media posts, customer feedback, or general text entries, to determine the underlying sentiment. This tool is particularly useful for businesses, social media analysts, and individuals who need to gauge sentiment in written content
+SentimAnalyzer is an AI-powered web application designed to analyze and interpret the emotional tone behind text inputs. Utilizing advanced natural language processing techniques, SentimAnalyzer can process a wide range of text inputs, such as social media posts, customer feedback, or general text entries, to determine the underlying sentiment. This tool is particularly useful for businesses, social media analysts, and individuals who need to gauge sentiment in written content.
 
 Features
 --------
