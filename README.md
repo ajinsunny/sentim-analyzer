@@ -17,11 +17,11 @@ Features
 Tech Stack
 ----------
 
--   Front-End: Next.js, React, Tailwind CSS
--   Back-End: Python with Flask (for handling ML models)
--   NLP & ML: NLTK, spaCy, Hugging Face's Transformers
--   Database: [Your choice of database]
--   Hosting/Cloud Services: Vercel/AWS/Heroku
+-   Front-End: Next.js 14, React 18, TypeScript
+-   UI Components: shadcn/ui, Radix UI, Tailwind CSS
+-   Sentiment Analysis: HuggingFace Inference API
+-   Model: RoBERTa-based 3-class sentiment classifier
+-   Hosting: Vercel (recommended)
 -   Version Control: Git, GitHub
 
 Getting Started
@@ -29,49 +29,56 @@ Getting Started
 
 ### Prerequisites
 
--   Node.js
--   Python 3.x
+-   Node.js (v18 or higher)
+-   npm or yarn
 -   Git
+-   HuggingFace account (free)
 
 ### Installation
 
 1.  Clone the repository:
 
-    shCopy code
-
-    `git clone https://github.com/ajinsunny/sentim-analyzer.git`
+    ```bash
+    git clone https://github.com/ajinsunny/sentim-analyzer.git
+    ```
 
 2.  Navigate to the project directory and install dependencies:
 
-    shCopy code
-
-    `# Install front-end dependencies
+    ```bash
     cd sentim-analyzer
     npm install
+    ```
 
-    # Install back-end dependencies
-    # Navigate to the back-end directory if separate
-    pip install -r requirements.txt`
+3.  Set up HuggingFace API:
+    -   Create a free account at [HuggingFace](https://huggingface.co/join)
+    -   Generate an API token at [Settings → Access Tokens](https://huggingface.co/settings/tokens)
+    -   Select "Read" permissions
+    -   Copy the token (starts with `hf_...`)
 
-3.  Set up environment variables:
-    -   Create a `.env` file in the root directory.
-    -   Add the necessary API keys and database URIs.
+4.  Set up environment variables:
+    -   Copy `.env.example` to `.env.local`:
+        ```bash
+        cp .env.example .env.local
+        ```
+    -   Open `.env.local` and replace the placeholder with your actual API key:
+        ```
+        HUGGINGFACE_API_KEY=hf_your_actual_api_key_here
+        ```
 
 ### Running the Application
 
 1.  Start the Next.js development server:
 
-    shCopy code
+    ```bash
+    npm run dev
+    ```
 
-    `npm run dev`
+2.  Open your browser and navigate to:
+    ```
+    http://localhost:3000
+    ```
 
-2.  Run the Python server for backend services (if separate):
-
-    shCopy code
-
-    `python app.py`
-
-3.  Access the application through `localhost:3000` in your browser.
+3.  Enter any text and click "Analyze" to see the sentiment analysis results!
 
 Contributing
 ------------
